@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://127.0.0.1:8000', // Tumhara FastAPI Server
+  baseURL: 'http://task-manager-app-production-0f42.up.railway.app', // FastAPI Server
 });
 
 // Har request me JWT token attach karne ka jugaad
