@@ -1,0 +1,26 @@
+# -----------------------
+# Backend (FastAPI / Python)
+# -----------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+taskmanager.db
+
+# -----------------------
+# Frontend (React / Vite)
+# -----------------------
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+frontend/.eslintcache
+
+# -----------------------
+# System / Environment Files
+# -----------------------
+.env
+.DS_Store
+Thumbs.db
