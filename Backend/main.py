@@ -100,7 +100,7 @@ def create_project(project: schemas.ProjectCreate, db: Session = Depends(get_db)
 
 @app.get("/projects/", response_model=list[schemas.ProjectResponse])
 def get_projects(db: Session = Depends(get_db), current_user: models.User = Depends(get_current_user)):
-    # Admin apne projects dekhega, members sabhi projects dekh sakte hain (ya requirement ke hisaab se filter kar sakte ho)
+    # Admin apne projects dekhega, members sabhi projects dekh sakte hain
     projects = db.query(models.Project).all()
     return projects
 
@@ -153,4 +153,6 @@ def get_all_users(db: Session = Depends(get_db), current_user: models.User = Dep
     # Team management ke liye saare users fetch karna
     users = db.query(models.User).all()
     return users
-    # start deploy
+
+# start deploy
+      
