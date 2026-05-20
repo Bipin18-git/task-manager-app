@@ -16,7 +16,7 @@ app = FastAPI(title="Tagda Task Manager API", description="Role-based project & 
 # CORS setup (Taaki Frontend React isse connect kar sake)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Production me isko apne frontend URL se replace karna
+    allow_origins=["https://worthy-appreciation-production.up.railway.app"],  # Production me isko apne frontend URL se replace karna
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
