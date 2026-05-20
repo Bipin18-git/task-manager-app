@@ -153,3 +153,4 @@ def get_all_users(db: Session = Depends(get_db), current_user: models.User = Dep
     # Team management ke liye saare users fetch karna
     users = db.query(models.User).all()
     return users
+    # start deploy
