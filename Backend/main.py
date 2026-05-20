@@ -16,7 +16,7 @@ app = FastAPI(title="Tagda Task Manager API", description="Role-based project & 
 # CORS setup (Taaki Frontend React isse connect kar sake)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # <--- YAHAN CHANGE KIYA HAI (Brahmastra - Sabko allow kar diya)
+    allow_origins=["https://worthy-appreciation-production.up.railway.app"],  # Exact URL without trailing slash
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -100,7 +100,7 @@ def create_project(project: schemas.ProjectCreate, db: Session = Depends(get_db)
 
 @app.get("/projects/", response_model=list[schemas.ProjectResponse])
 def get_projects(db: Session = Depends(get_db), current_user: models.User = Depends(get_current_user)):
-    # Admin apne projects dekhega, members sabhi projects dekh sakte hain
+    # Admin apne projects dekhega, members sabhi projects dekh sakte hain (ya requirement ke hisaab se filter kar sakte ho)
     projects = db.query(models.Project).all()
     return projects
 
