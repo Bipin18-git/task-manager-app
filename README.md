@@ -1,4 +1,4 @@
-# Task Manager Pro 🚀
+# Task Manager Pro 
 
 A full-stack, role-based project and task management application designed for seamless team collaboration and workflow tracking.
 
